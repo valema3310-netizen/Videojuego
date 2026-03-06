@@ -1,18 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
+*{ /*el asterisco es para que cambie TODO*/
+    margin: 0; /*quita las margenes automaticas*/
+    padding: 0; /*quita las espacios automaticos*/
     box-sizing: border-box;
 }
 
-body {
+body { /*el body es para todo lo visinle en la pagina*/
     background-image: url("https://i.pinimg.com/736x/3f/9d/19/3f9d19b02797c8cf040180298d0d6793.jpg");
     background-repeat: repeat;
     background-size: 1500px;
-    animation: moverFondo 15s linear infinite;
+    animation: moverFondo 15s linear infinite; /*el linear es velocidad constante*/
 
     font-family: Lato, serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.5; /* interlineado */
     color: rgb(255, 255, 255);
 }
 
@@ -32,25 +32,36 @@ h1, h2, h3, .logo {
 }
 
 a {
-    text-decoration: none;
-    color: rgb(171, 216, 255);
+    text-decoration: none; /*le quita la linea de link a las palabras*/
+    color: rgb(254, 255, 255);
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
+    width: 90%; /*el contenedor va a ocupar el 90% del dispositivo*/
+    max-width: 1100px; /*no va a crecer mas alla de esos px*/
+    margin: auto; /*para cuando se pone horizontal*/
 }
 
-.site-header {
+.site-header { /*encabezado*/
+    position: fixed; /*para que quede fijo en la pantalla*/
+    top: 0; /*lo pega arriba del todo*/
+    left: 0;
+    width: 100%;
     padding: 1rem 0;
-    background-color: rgba(0, 0, 0, 0.704);
+    background-color: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.45);
+    z-index: 999; /*para que quede por encima de otros elementos*/
 }
 
 .site-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+main {
+    padding-top: 96px;
 }
 
 .logo {
@@ -83,8 +94,21 @@ a {
 #arte {
     padding: 60px 0;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.862);
     margin-bottom: 20px;
+}
+
+section > .container {
+    background-color: rgba(0, 0, 0, 0.72);
+    border-radius: 22px;
+    padding: 40px 30px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+.personajes-item {
+    background: rgba(0, 0, 0, 0.47);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
 }
 
 h2 {
